@@ -1,0 +1,127 @@
+body {
+  background-color: #f5d47d;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Encabezado */
+h1 {
+  color: #2c393d;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #888888;
+}
+h2{
+  color: #f0990a;
+}
+/* Botón */
+.btn {
+  color: #f0990a;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  background: url('./imgs/boton.png') no-repeat center center; /* Cambia la ruta por la de tu imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el botón */
+  border: none; /* Elimina bordes */
+  width: 200px; /* Ajusta el ancho del botón */
+  height: 200px; /* Ajusta la altura del botón */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  outline: none; /* Elimina el contorno al enfocarse */
+  font-size: 12.5px;
+  font-family:  'Times New Roman', Times, serif
+  
+}
+.display-4{
+  color: #2c393d;
+}
+.btn:hover {
+  transform: scale(1.8); /* Agranda el botón ligeramente */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Carrusel */
+.custom-carousel-img {
+  width: 300px; /* Tamaño cuadrado */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Estilo del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 20%; /* Reducir ancho del área clicable */
+}
+
+.carousel-control-prev-icon{ /* prev icon */
+  margin-left: -50px;
+  margin-top: -30px;
+  transform: scale(1.0);
+}
+.carousel-control-next-icon { /* NEXT icon */
+  transform: scale(1.0); /* Reducir tamaño del ícono */
+  margin-top: -30px; /* Mover más cerca de la imagen */
+  margin-right: -50px;
+}
+
+.carousel-inner {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* SweetAlert2 Custom */
+.swal-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.swal-popup {
+  border-radius: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.swal-confirm-btn {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  
+}
+/* Posicionamiento de las imágenes en las esquinas */
+.esquina {
+  position: fixed;
+  max-width: 200px; /* Ajusta el tamaño dinámico */
+  height: auto;
+  z-index: 999; /* Asegura que estén siempre visibles */
+   /* Bordes redondeados para evitar el aspecto cuadrado */
+  //* background-color: #b4e0dd; /* Fondo blanco igual al del body */
+}
+
+.esquina-1 {
+  top: 10px;
+  left: 10px;
+  height: auto;;
+  width: 400px;
+}
+
+.esquina-2 {
+  top: 10px;
+  right: 10px;
+}
+
+.esquina-3 { /*la variables .esquina son las imagenes, no modificar*/
+  bottom: 10px;
+  left: 10px;
+}
+
+.esquina-4 {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* eliminar bordes extraños */
+img {
+  border: none; /* Sin bordes */
+  box-shadow: none; /* Sin sombras */
+  outline: none; /* Sin contorno */
+  background-color: transparent; /* Fondo transparente */
+  
+}
+
+

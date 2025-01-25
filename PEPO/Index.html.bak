@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+      body {
+        background-image: url('C:/Users/Usuario/Pictures/PEPO/Ballons2.jpg'); /* Asegúrate de que la ruta sea correcta */
+        background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+        background-color: #ffffff; /* Color de respaldo si la imagen no carga */
+      }
+
+      .titulo {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para resaltar el texto */
+        padding: 10px;
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="titulo">Pepo's Birthday</div>
+    
+  </body>
+</html>
