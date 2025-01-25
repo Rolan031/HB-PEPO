@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pepo's Birthday</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- SweetAlert2 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Enlace a tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="Estilos.css" />
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <script>
+      // Función que muestra la alerta, inicia el audio y después el carrusel
+      function mostrarAdvertenciaYCarousel() {
+        const audio = document.getElementById("audioPlayer");
+        const audio1 = document.getElementById("audioPlayer1");
+
+        // Reproducir el audio
+        audio.play().catch((error) => {
+          console.error("No se pudo reproducir el audio:", error);
+        });
+        audio1.play().catch((error) => {
+          console.error("No se pudo reproducir el audio 1:", error);
+        });
+
+        // Mostrar alerta y luego el carrusel
+        Swal.fire({
+          title: "O'PEPIN",
+          text: "Feliz cumple ATT:R.A :)",
+          
+          confirmButtonText: "Ya za!",
+          confirmButtonColor: "#dc3545",
+          customClass: {
+            title: "swal-title",
+            popup: "swal-popup",
+            confirmButton: "swal-confirm-btn",
+          },
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Mostrar el carrusel
+            document.getElementById("carouselContainer").style.display = "block";
+          }
+        });
+      }
+
+      window.onload = () => {
+        // Ocultar carrusel al cargar la página
+        document.getElementById("carouselContainer").style.display = "none";
+      };
+    </script>
+  </head>
+  <body>
+    <center>
+      <!-- Audio sin controles ni autoplay -->
+      <audio id="audioPlayer" src="./audios/feliz cumpleaños loquendo [-Y1Hx-23v2E].mp3" hidden></audio>
+      <audio id="audioPlayer1"  src="./audios/Happy Birthday to You (Original Version).mp3" hidden></audio>
+    </center>
+
+    <div class="container text-center mt-5">
+      <h2>Pepo's Birthday</h2>
+
+      <!-- Botón para iniciar -->
+      <h2>
+        <button class="btn" onclick="mostrarAdvertenciaYCarousel()">DAME<div></div>&nbspDURO!!</button>
+      </h2>
+
+      <!-- Esquinas con globos -->
+      <img src="./imgs/ballons1.png" class="esquina esquina-1" alt="Esquina 1" />
+      <img src="./imgs/ballons2.png" class="esquina esquina-2" alt="Esquina 2" />
+      <img src="./imgs/ballons2.png" class="esquina esquina-3" alt="Esquina 3" />
+      <img src="./imgs/ballons6.png" class="esquina esquina-4" alt="Esquina 4" />
+
+      <!-- Contenedor del Carrusel -->
+      <div id="carouselContainer" class="mt-5">
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+              <img
+                src="./imgs/2.jpg"
+                class="d-block mx-auto custom-carousel-img"
+                alt="1"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img
+                src="./imgs/2.jfif"
+                class="d-block mx-auto custom-carousel-img"
+                alt="2"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img
+                src="./imgs/3.jfif"
+                class="d-block mx-auto custom-carousel-img"
+                alt="3"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img
+                src="./imgs/4.jfif"
+                class="d-block mx-auto custom-carousel-img"
+                alt="4"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img
+                src="./imgs/5.jfif"
+                class="d-block mx-auto custom-carousel-img"
+                alt="5"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img
+                src="./imgs/peporolo.jpeg"
+                class="d-block mx-auto custom-carousel-img"
+                alt="6"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img
+                src="./imgs/peporolo1.jpeg"
+                class="d-block mx-auto custom-carousel-img"
+                alt="7">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="./imgs/peporolo2.jpeg"
+              class="d-block mx-auto custom-carousel-img"
+              alt="8">
+        </div>
+          
+      
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      window.onload = () => {
+        // Ocultar carrusel al cargar la página
+        document.getElementById("carouselContainer").style.display = "none";
+        
+     }
+    </script>
+    
+  </body>
+</html>
